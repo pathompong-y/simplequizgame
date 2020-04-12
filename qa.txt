@@ -1,0 +1,176 @@
+var questions = [
+				{ 
+					question: "Final Drawing specifications for pilot plants and refineries in Documentum",
+					correct: 1
+				},
+				{ 
+					question: "Initial draft of Drawing specifications for pilot plants and refineries",
+					correct: 2
+				},
+				{ 
+					question: "Master version of Pipeline design manual",
+					correct: 1
+				},
+				{ 
+					question: "Copy of Drawing specifications for red mark",
+					correct: 2
+				},
+				{ 
+					question: "Presentations made at external conferences by our employee",
+					correct: 1
+				},
+				{ 
+					question: "Presentation Material received from external conferences attended by Company staff",
+					correct: 2
+				},
+				{ 
+					question: "Presentation Material received from external conferences attended by Company staff ten year ago",
+					correct: 3
+				},
+				{ 
+					question: "Annual Business Plan which is endorsed by CEO",
+					correct: 1
+				},
+				{ 
+					question: "Month Budget VS. Actual",
+					correct: 2
+				},
+				{ 
+					question: "Well Files",
+					correct: 1
+				},
+				{ 
+					question: "Correspondence email among company and Partner",
+					correct: 2
+				},
+				{ 
+					question: "Final DRB of each phase gate",
+					correct: 1
+				},
+				{ 
+					question: "Pre-read DRB package Phase 2 for alternatives selection ",
+					correct: 2
+				},
+				{ 
+					question: "Email with DRB Decision Support Package attached",
+					correct: 3
+				},
+				{ 
+					question: "Technical Reports prepared by ES for RAC meeting this year",
+					correct: 1
+				},
+				{ 
+					question: "Reports from company databases for Business Plan meeting on next week",
+					correct: 2
+				},
+				{ 
+					question: "Excel file with data extracted from database",
+					correct: 3
+				},
+				{ 
+					question: "Vendor presentation during bidding process",
+					correct: 2
+				},
+				{ 
+					question: "Vendor bidding presentation after bidding award",
+					correct: 3
+				},
+				{ 
+					question: "Final Contract in PDF in Ariba",
+					correct: 1
+				},
+				{ 
+					question: "Vendor Service Contract in PDF and this contract still ACTIVE",
+					correct: 2
+				},
+				{ 
+					question: "Vendor Service Contract in PDF in email",
+					correct: 3
+				},
+				{ 
+					question: "Final Contract hardcopy in DataSafe",
+					correct: 1
+				},
+				{ 
+					question: "Copied of Contracts printed from Ariba database for performance review",
+					correct: 2
+				},
+				{ 
+					question: "Thailand vacation policy",
+					correct: 1
+				},
+				{ 
+					question: "Policy guideline presentation downloaded from corporate website",
+					correct: 2
+				},
+				{ 
+					question: "Office Building access log",
+					correct: 1
+				},
+				{ 
+					question: "Filled T-Card request form",
+					correct: 1
+				},
+				{ 
+					question: "T-card request template",
+					correct: 2
+				},
+				{ 
+					question: "Employee Health",
+					correct: 1
+				},
+				{ 
+					question: "Scanned of Check-up report since 2010",
+					correct: 3
+				},
+				{ 
+					question: "Hazardous waste audits & inspection",
+					correct: 1
+				},
+				{ 
+					question: "PGPA Lobbying Reports",
+					correct: 1
+				},
+				{ 
+					question: "PGPA Transmittal Letter",
+					correct: 2
+				}
+			]
+			
+			
+			function RandomMultipleNumbers(max, randomAmount){
+				var result = [];
+				for(var i=0; i<randomAmount; i++){
+					var rand;
+					do{
+						rand = Math.floor(Math.random() * max);
+					}while(result.indexOf(rand) >= 0);
+					result.push(rand);
+				}
+				return result;
+			}
+			
+			//Call this function to get questions
+			function RandomlyGetQuestions(questionAmount){
+				var totalNumberOfQuestion = questions.length;
+				var selectedQuestions = [];
+				
+				if(questionAmount > totalNumberOfQuestion){
+					return questions;
+				}
+				
+				var questionNumbers = RandomMultipleNumbers(totalNumberOfQuestion, questionAmount);
+				questionNumbers.forEach(function(n){
+					selectedQuestions.push(questions[n]);
+				});
+				return selectedQuestions;
+			}
+			
+			function clicked(){
+				console.log(RandomlyGetQuestions(5));
+			}
+			
+			//Call this function to check answer
+			function IsCorrect(question, answer){
+				return question.correct == answer;
+			}

@@ -1,0 +1,142 @@
+<html>
+<title>CLUTTER HUNTER</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="jquery.transit.min.js"></script>
+    <script src="qa.js"></script>
+    <script src="clutterhunter.js"></script>
+    <link rel="stylesheet" href="standardize.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+</head>
+<body>
+    <div class="splash">
+        <div class="splashmessage">
+            <div style="width:60%"><img src="img/image001.png"></div>
+            <div class="startgame" style="font-size:3vw">start game ></div>
+        </div>
+    </div>
+    <div class="gamecontainer">
+        
+
+        
+        <div class="enemycontainer">
+            <div class="enemyspritecontainer">
+                <div class="enemy battle"><img src="img\folder_battle.png"></div>
+                <div class="enemyshadow"></div>
+            </div>
+            <div class="enemyhealthcontainer">
+                <div class="enemyhealth" id="1"><img src="img\folder_hp.png"></div>
+                <div class="enemyhealth" id="2"><img src="img\folder_hp.png"></div>
+                <div class="enemyhealth" id="3"><img src="img\folder_hp.png"></div>
+<!--
+                <div class="enemyhealth" id="4"><img src="img\folder_hp.png"></div>
+                <div class="enemyhealth" id="5"><img src="img\folder_hp.png"></div>
+-->
+            </div>
+            <div class="speech-bubble-enemy adjust">.......................</div>
+        </div>
+        
+        
+        
+        <div class="speech-bubble-player">
+            <div><span>....</span></div>
+            <div class="nextbutton"><a>TAP ></a></div>
+        </div>
+        
+        
+        <div  class="tooleffectcontainer" style="position: absolute;left:45%;bottom: 35%">
+            <div class="toolcontainer" style="position: relative;width: 30%;"><img src="img\tool_sharepoint.png"></div>
+            <div class="effectcontainer" style="position: relative;width: 5%;left:6%;">
+            <img src="img/effect_DROP.png">
+            </div>
+            <div class="effectimpactcontainer" style="position: relative;width: 20%;">
+                <img src="img/effect_IMPACT.png">
+            </div>
+            
+        </div>
+        
+        <div class="toolshadow"></div>
+        
+        <div class="enemyattackcontainer">
+            <img src="img\folder_paper_atk.png">
+            <div class="playerdamagecontainer" style="position: relative;left:100%;width:50%;"><img src="img\effect_BAM.png"></div>
+        </div>
+        
+        <div class="enemypaperfly"><img src="img/folder_paper_fly_1.png"></div>
+        
+        <div class="playercontainer">
+                
+                <div style="width: 100%;display: flex;flex-flow: column;">
+
+                    <div class="playerspritecontainer">
+                        <div class="player"><img src="img\player_idle.png"></div>
+                        <div class="playershadow"></div>
+
+                    </div>
+                    <div class="playerhealthcontainer">
+                        <div class="playerhealth" id="hp2"><img src="img\player_hp.png"></div>
+                        <div class="playerhealth" id="hp1"><img src="img\player_hp.png"></div>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="buttoncontainer">
+            <div class="buttonlablecontainer" id="record">
+                <div class="button" id="record"><img src="img/tool_sharepoint.png"></div>
+                <div class="buttonlabel" id="record"><span id="record">Company Record</span></div>
+            </div>
+            <div class="buttonlablecontainer" id="reference">
+                <div class="button" id="reference"><img src="img/tool_onedrive.png"></div>
+                <div class="buttonlabel" id="reference"><span id="reference">Reference</span></div>
+            </div>
+            <div class="buttonlablecontainer" id="rot">
+                <div class="button" id="rot"><img src="img/tool_recycle.png"></div>
+                <div class="buttonlabel" id="rot"><span id="rot">Redundant, Obsolete, Trivial</span></div>
+            </div>
+        </div>
+        
+        <div class="gameover" style="position: absolute;width:80%;background-color:darkcyan;z-index: 100;padding: 20px;opacity: 0;top:5%;left:10%;display: none;">
+            <div style="text-align: center;;font-size: 3vw">
+                <img src="img/player_gameover.png" style="display: block;margin-left: auto;margin-right: auto;width: 80%">
+                <br>
+                <b>GAME OVER</b><br><br>
+                <p>
+                Clutter Hunter was knocked out.<br>
+                The mission was failed.
+                <br>
+                <br>
+                <br>
+                I heard that those cool rewards are still available.<br>
+                <br>
+                    <b>Try again?</b>
+                </p>
+
+                <div class="retry" style="width:80%;margin: 10px auto 10px auto;background-color: dodgerblue;padding:20px;border-radius:10px">SURE!! ></div>
+                <br>
+
+
+            </div>
+        </div>
+        
+        <div class="winscreen" style="position: absolute;width:80%;background-color: skyblue;z-index: 100;padding: 20px;opacity: 0;top:5%;left:10%;display: none;">
+            <img src="img/star.png" style="display: block;padding: 10px;width: 50%; margin-left: auto;margin-right: auto">
+            <div style="text-align: center;font-size: 3vw">
+                <b>CONGRATURATIONS</b><br><br>
+                <p>
+                <b>You have completed the quest!<br><br>
+                Please show this screen to our staff to get your award.</b>
+                <br>
+                <br>
+                <br>
+                Thank you for playing<br>
+                We hope that it was educating and entertaining.
+                </p>
+                <div class="retry" style="width:80%;margin: 10px auto 10px auto;background-color: dodgerblue;padding:20px;border-radius:10px">play again? ></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

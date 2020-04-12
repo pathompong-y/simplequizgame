@@ -1,0 +1,401 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto Slab', serif;
+    background-image:url("img/bg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #454545;
+}
+
+.splash
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+    
+    box-shadow: 0px 10px 20px 10px #000000;
+}
+
+.splashmessage
+{    
+    width: 100%;
+    height: 40%;
+    margin-top: 30%;
+    opacity: 0.9;
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-position:center
+}
+
+.startgame
+{
+    margin: 20px;
+    background-color: coral;
+    padding: 10px;
+    border-radius: 40px;
+    
+}
+
+.gamecontainer
+{
+/*
+    width: 740px;
+    height: 360px;
+*/
+    
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+/*    background-color: antiquewhite;*/
+
+/*    filter: blur(10px);*/
+}
+
+.enemycontainer
+{
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.enemyspritecontainer
+{
+    position: relative;
+    top: 0%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.enemy
+{
+    position: relative;
+    z-index: 3;
+}
+
+.enemyattackcontainer
+{
+    position: absolute;
+    width: 35%;
+    opacity: 0;
+}
+
+.enemy.battle
+{
+    width: 100%;
+}
+
+.enemyhealthcontainer
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.enemyhealth
+{
+    width: 100%;
+}
+
+.enemyhealth.lost
+{
+    opacity: 0.2;
+}
+
+.enemyshadow
+{
+    position: relative;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 50%;
+    height: 5px;
+    border: none;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(40,40,40,0.7);
+    top: -5px;
+    left: 5px;
+    z-index: 1;
+}
+
+
+/*PLAYER*/
+
+.playercontainer
+{
+    position: absolute;
+    top: 15%;
+    left: 70%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerspritecontainer
+{
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.playerhealthcontainer
+{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.playerhealth
+{
+    width: 100%;
+}
+
+.lost
+{
+    opacity: 0.2;
+}
+
+.playershadow
+{
+    position: relative;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 90%;
+    height: 5px;
+    border: none;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(40,40,40,0.7);
+    margin-top: -4px;
+    
+    z-index: 1;
+}
+
+.toolshadow
+{
+    position: absolute;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 5%;
+    height: 5px;
+    border: none;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: rgba(40,40,40,0.7);
+    margin-top: -4px;
+    z-index: 1;
+    opacity: 0;
+}
+
+/*EFFECT*/
+.tooleffectcontainer
+{
+    opacity: 0;
+    z-index: 4;
+}
+
+.effectcontainer
+{
+    opacity: 0;
+}
+
+.effectimpactcontainer
+{
+    opacity: 0;
+}
+
+.enemypaperfly
+{
+    position: absolute;
+    width:20%;
+    opacity: 0;
+}
+
+.enemyattackcontainer
+{
+    opacity: 0;
+}
+
+/*CONTROL*/
+
+.buttoncontainer
+{
+    position: absolute;
+    background-color: #ececec;
+    border-radius: 15px;
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+    justify-content: center;
+    opacity: 0;
+    left: 10%;
+    padding: 20px;
+    top: 54%;
+    box-shadow: 0px 3px 0px 0px darkgrey;
+}
+
+.buttonlablecontainer
+{
+    margin-top: 20px;
+    z-index: 10;
+}
+
+.buttonlablecontainer span
+{
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: #238bff    
+}
+
+.buttonlabel
+{
+    position: relative;
+    float: left;
+    border-radius: 20px;
+    background-color: white;
+    width: 90%;
+    padding: 15px;
+    padding-left: 30%;
+    margin-left: -40%;
+    box-shadow: 0px 3px 6px 1px lightgrey;
+}
+
+.button
+{
+    position: relative;
+    float: left;
+    width: 50%;
+    z-index: 6;
+    margin-top: -5%;
+}
+
+.buttonlabel.select
+{
+    background-color:lightblue;
+}
+
+.button img
+{
+    width: 70%;
+}
+
+
+/* UNIVERSAL AREA */
+
+.speech-bubble-enemy {
+	position: relative;
+	background: darkgray;
+	border-radius: .4em;
+    font-family: 'Roboto Slab', serif;
+}
+
+.speech-bubble-enemy:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: darkgray;
+	border-bottom: 0;
+	border-right: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.speech-bubble-enemy.adjust
+{
+    position: absolute;
+    padding: 15px;
+    opacity: 0;
+}
+
+.speech-bubble-player {
+	position: absolute;
+	background-color: lightgrey;
+    box-shadow: 0px 3px 0px 0px darkgrey;
+	border-radius: 10px;
+    font-family: 'Roboto Slab', serif;
+    padding: 15px;
+    left:0%;
+    opacity: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    font-size: 3.7vw;
+}
+
+.speech-bubble-player:after {
+	content: '';
+	position: absolute;
+	top: -20;
+	left: 95%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: lightgray;
+	border-top: 0;
+	border-left: 0;
+	margin-left: -10px;
+	margin-bottom: -20px;
+}
+
+.nextbutton
+{
+    text-align: left;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: darkgray;
+    padding: 5px;
+    border-radius: 1px;
+    margin-top: px;
+    right: 3%;
+    position: absolute;
+    box-shadow: 0px 3px 6px 1px lightgrey;
+}
